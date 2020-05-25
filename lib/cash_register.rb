@@ -11,7 +11,7 @@ class CashRegister
     quant.times do
       @items << name 
     end 
-    
+    @transaction = 
   end
   def apply_discount
     if discount != 0
