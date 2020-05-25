@@ -22,9 +22,6 @@ class CashRegister
     end
   end
   def void_last_transaction
-    @total = self.total - self.transaction
-    if @items.length == 0 
-      self.total = 0 
-    end
+    self. total = self.total - self.transaction
   end
 end
