@@ -11,7 +11,7 @@ class CashRegister
     quant.times do
       @items << name 
     end 
-    @transaction = 
+    self.transaction = price * quant
   end
   def apply_discount
     if discount != 0
@@ -22,7 +22,7 @@ class CashRegister
     end
   end
   def void_last_transaction
-    
+    @total = self.total - self.transaction
     if @items.length == 0 
       self.total = 0 
     end
